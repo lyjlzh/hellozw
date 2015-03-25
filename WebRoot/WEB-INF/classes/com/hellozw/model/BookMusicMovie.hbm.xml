@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hellozw.model">
+	<class table="BOOKMUSICMOVIE" name="BookMusicMovie">
+		<id name="id" column="ID" type="string">
+			<generator class="uuid.hex" />
+		</id>
+		<property name="name" column="NAME" />
+
+		<property name="author" column="AUTHOR" />
+
+		<property name="country" column="COUNTRY" />
+
+		<property name="type1" column="TYPE1" />
+
+		<property name="type2" column="TYPE2" />
+
+		<property name="introduction" column="INTRODUCTION" />
+
+		<property name="review" column="REVIEW" />
+
+		<property name="createDt" column="CREATEDT" />
+
+		<property name="updateDt" column="UPDATEDT" />
+
+		<set name="comments" cascade="all">
+			<key column="BOOKMUSICMOVIE_ID" />
+			<one-to-many class="Comment" />
+		</set>
+
+		<set name="fileInfos" cascade="all">
+			<key column="BOOKMUSICMOVIE_ID" />
+			<one-to-many class="FileInfo" />
+		</set>
+
+	</class>
+</hibernate-mapping>

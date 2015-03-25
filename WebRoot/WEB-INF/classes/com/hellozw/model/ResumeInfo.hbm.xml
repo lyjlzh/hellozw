@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hellozw.model">
+	<class table="RESUMEINFO" name="ResumeInfo">
+		<id name="id" column="ID" type="string">
+			<generator class="uuid.hex" />
+		</id>		
+
+		<property name="introduction" column="INTRODUCTION" />
+
+		<property name="createDt" column="CREATEDT" />
+
+		<property name="updateDt" column="UPDATEDT" />
+		
+		<set name="projectAwards" cascade="all" >
+			<key column="RESUMEINFO_ID"/>
+			<one-to-many class="ProjectAward"/>
+		</set>
+
+	</class>
+</hibernate-mapping>

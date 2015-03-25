@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hellozw.model"> 
+	<class table="USERDYNAMICINFO" name="UserDynamicInfo">
+		<id name="id" column="ID" type="string">
+           <generator class="uuid.hex"/>
+		</id>
+		<property name="content" column="CONTENT"/>
+		
+		<property name="type" column="TYPE" />
+		
+		<property name="createDt" column="CREATEDT" />
+		
+		<property name="updateDt" column="UPDATEDT" />
+
+		<set name="comments" cascade="all" >
+			<key column="USERDYNAMICINFO_ID"/>
+			<one-to-many class="Comment"/>
+		</set>
+		
+		<set name="fileInfos" cascade="all" >
+			<key column="USERDYNAMICINFO_ID"/>
+			<one-to-many class="FileInfo"/>
+		</set>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hellozw.model">
+	<class table="PROJECTAWARD" name="ProjectAward">
+		<id name="id" column="ID" type="string">
+			<generator class="uuid.hex" />
+		</id>		
+
+		<property name="name" column="NAME" />
+
+		<property name="type1" column="TYPE1" />
+		
+		<property name="type2" column="TYPE2" />
+		
+		<property name="content" column="CONTENT" />
+		
+		<property name="description" column="DESCRIPTION" />
+
+		<property name="createDt" column="CREATEDT" />
+
+		<property name="updateDt" column="UPDATEDT" />
+		
+		<many-to-one name="resumeInfo" column="RESUMEINFO_ID" />
+		
+		<set name="fileInfos" cascade="all" >
+			<key column="PROJECTAWARD_ID"/>
+			<one-to-many class="FileInfo"/>
+		</set>
+
+	</class>
+</hibernate-mapping>

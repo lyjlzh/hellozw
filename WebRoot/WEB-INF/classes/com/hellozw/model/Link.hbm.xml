@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hellozw.model">
+	<class table="LINK" name="Link">
+		<id name="id" column="ID" type="string">
+			<generator class="uuid.hex" />
+		</id>
+		<property name="name" column="NAME" />
+
+		<property name="url" column="URL" />
+
+		<property name="icon" column="ICON" />
+
+		<property name="level" column="LEVEL" />
+
+		<property name="type" column="TYPE" />
+
+		<property name="introduction" column="INTRODUCTION" />
+
+		<property name="createDt" column="CREATEDT" />
+
+		<property name="updateDt" column="UPDATEDT" />
+
+		<many-to-one name="personalNav" column="PERSONALNAV_ID" />
+
+		<set name="fileInfos" cascade="all">
+			<key column="LINK_ID" />
+			<one-to-many class="FileInfo" />
+		</set>
+
+	</class>
+</hibernate-mapping>

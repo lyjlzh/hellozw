@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+
+	<package name="hellozw" namespace="/" extends="struts-default">
+		<action name="aboutme" class="com.hellozw.action.AboutMeAction">
+			<result>/views/aboutme/aboutme.jsp</result>
+		</action>
+		<action name="login" class="com.hellozw.action.LoginAction">
+			<result>/views/login/login.jsp</result>
+		</action>
+		<action name="*Main" class="com.hellozw.action.MainAction"
+			method="{1}">
+			<result>/views/main/main.jsp</result>
+		</action>
+		<action name="*Experience" class="com.hellozw.action.ExperienceAction" method="{1}">
+			<result>/views/experience/experience.jsp</result>
+		</action>
+		
+		<action name="placeOrder">
+			<result>/neworder.jsp</result>
+		</action>
+		<action name="addUser">
+			<result>/addUserPage.jsp</result>
+		</action>
+		<action name="saveNewUser" class="com.hellozw.action.UserAction">
+			<result>/index.jsp</result>
+		</action>
+
+		<!-- Add actions here -->
+	</package>
+	<package name="json" namespace="/json" extends="json-default">
+		<action name="*MainActionJson" class="com.hellozw.action.MainAction"
+			method="{1}">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="*LinkAction" class="com.hellozw.action.LinkAction"
+			method="{1}">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>
