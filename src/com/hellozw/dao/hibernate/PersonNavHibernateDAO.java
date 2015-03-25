@@ -6,7 +6,6 @@ import java.util.List;
 import com.hellozw.dao.IPersonNavDAO;
 import com.hellozw.model.PersonalNav;
 
-import org.apache.tomcat.util.digester.CallMethodRule;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 public class PersonNavHibernateDAO extends HibernateDaoSupport implements
