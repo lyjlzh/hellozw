@@ -46,9 +46,7 @@
 							IP管控<a class="anchorjs-link" href="#thumbnail-label"><span
 								class="anchorjs-icon"></span></a>
 						</h3>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
-							dolor id nibh ultricies vehicula ut id elit.</p>
+						<p>IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控IP管控</p>
 						<p>
 							<a href="#" class="btn btn-primary" role="button">了解更多</a> <a
 								href="#" class="btn btn-default" role="button">分享</a> <a
