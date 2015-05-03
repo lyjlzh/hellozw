@@ -9,17 +9,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><sitemesh:write property="title" /></title>
 <!-- Loading Bootstrap -->
-<link href="${path}/js/Bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="${path}/css/common.css" rel="stylesheet">
-<link href="${path}/css/social-buttons.css" rel="stylesheet">
-<link href="${path}/views/template/template.css" rel="stylesheet">
+<link href="${path}/js/Bootstrap/css/bootstrap.min.css" rel="stylesheet"></link>
+<link href="${path}/css/common.css" rel="stylesheet"></link>
+<link href="${path}/css/social-buttons.css" rel="stylesheet"></link>
+<link href="${path}/views/template/template.css" rel="stylesheet"></link>
+<link href="${path}/js/zw-bootstrap/zw-bootstrap.css" rel="stylesheet"></link>
 <link href="${path}/js/octicons/octicons.css" rel="stylesheet"></link>
 <link rel="shortcut icon"
-	href="http://static.bootcss.com/www/assets/ico/favicon.png">
+	href="http://static.bootcss.com/www/assets/ico/favicon.png"></link>
 <script src="${path}/js/jquery-1.11.2.min.js"></script>
 <script src="${path}/js/Bootstrap/js/bootstrap.js"></script>
-<script src="${path}/js/Bootstrap/js/tooltip.js"></script>
-<script src="${path}/js/Bootstrap/js/popover.js"></script>
+<script type="text/javascript"
+	src="${path}/js/zw-bootstrap/zw-bootstrap.js"></script>
 <script src="${path}/js/common.js"></script>
 <sitemesh:write property="head" />
 </head>
@@ -36,7 +37,7 @@
 			<ul class="nav navbar-nav navbar-left">
 				<li><a href="/HelloZw" class="header-nav-link">首页</a></li>
 				<li><a href="indexMain" class="header-nav-link">个性导航</a></li>
-				<li><a href="indexExperience" class="header-nav-link">项目经验</a></li>
+				
 				<li><a href="#" class="header-nav-link">Resume</a></li>
 				<li class="dropdown"><a href="#"
 					class="dropdown-toggle header-nav-link" data-toggle="dropdown">生活

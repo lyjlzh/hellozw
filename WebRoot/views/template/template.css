@@ -1,21 +1,9 @@
-a:link {
-	text-decoration: none;
-}
 
-a:visited {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-	color: #4183c4;
-}
-
-.nav>li>a:hover, .nav>li>a:focus {
+.nav>li>a:hover,.nav>li>a:focus {
 	background-color: #f5f5f5;
 }
 
-.navbar-brand, .navbar-nav>li>a {
+.navbar-brand,.navbar-nav>li>a {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	height: inherit;
@@ -29,14 +17,17 @@ a:hover {
 	font-weight: bold;
 }
 
-.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+.nav .open>a,.nav .open>a:hover,.nav .open>a:focus {
 	background-color: #f5f5f5;
 }
-
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
-	color: #fff;
+.dropdown-menu>li>a {
+  padding: 3px 15px;
+}
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {
 	text-decoration: none;
+	color: #fff; background-image : none;
 	background-color: #4183c4;
+	background-image: none;
 }
 
 .myhead {
@@ -155,7 +146,7 @@ footer p {
 	height: 65px;
 }
 
-.zw-tile-1, .zw-tile-2, .zw-tile-3, .zw-tile-4 {
+.zw-tile-1,.zw-tile-2,.zw-tile-3,.zw-tile-4 {
 	width: 182px;
 	height: 152px;
 	padding: 0;
@@ -165,7 +156,7 @@ footer p {
 	background-color: #fcfcfc;
 }
 
-.zw-tile-1:hover, .zw-tile-2:hover, .zw-tile-3:hover, .zw-tile-4:hover {
+.zw-tile-1:hover,.zw-tile-2:hover,.zw-tile-3:hover,.zw-tile-4:hover {
 	background-color: #f4f4f4;
 }
 

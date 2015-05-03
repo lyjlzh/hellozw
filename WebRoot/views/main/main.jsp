@@ -7,13 +7,13 @@
 <html>
 <head>
 <title>个性导航</title>
+<link href="${path}/js/Font-Awesome-3.2.1/css/font-awesome.css"
+	rel="stylesheet"></link>
 <script type="text/javascript"
 	src="${path}/js/dragsort-0.5.2/jquery.dragsort-0.5.2.js"></script>
 <script type="text/javascript" src="${path}/views/main/main.js"></script>
-<link href="${path}/js/Font-Awesome-3.2.1/css/font-awesome.css"
-	rel="stylesheet"></link>
-
 <style>
+
 #container-main {
 	height: 600px;
 }
@@ -132,27 +132,71 @@ a.list-group-item:hover {
 .list-group {
 	margin: -1px;
 }
+
+.panel-heading {
+	padding: 0;
+}
+
+.myul {
+	display: table;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.myul li {
+	float: left;
+	display: block;
+}
 </style>
 </head>
 <body>
 	<div class="container" id="container-main">
 		<div class="row">
 			<div class="col-lg-3" style="padding:0">
+
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title">
-							导航列表
-							<p class="popover-options pull-right" style="font-size:14px;">
-								<a id="mytitle" href="#" data-container="body"
-									data-toggle="popover" data-placement="bottom" class="a-help">
-									<span class="octicon octicon-plus"></span> <span
-									class="octicon octicon-triangle-down"></span>
-								</a> <span id="toggleedit" onclick="clickedit()"
-									class="octicon octicon-gear a-help"></span>
-							</p>
-						</h3>
+						<div class="panel-title">
+							<ul class="myul">
+								<li><a class="zwa zwtitle"><b>导航列表</b></a></li>
+								<li class="select-menu-parent pull-right"><a class="zwa"
+									zw-type="selectmenu" aria-shown="false">操作 <span
+										class="caret"></span>
+								</a>
+									<div class="select-menu-container select-menu-container-right">
+										<div class="select-menu-modal select-menu-modal-md">
+											<div class="select-menu-header">
+												<span class="select-menu-title">请选择操作内容</span> <span
+													class="octicon octicon-x js-menu-close"></span>
+											</div>
+											<div class="select-menu-content">
+												<div class="select-menu-list">
+													<a href="#" onclick="showNavMode()" class="select-menu-item"> <span
+														class="select-menu-item-icon octicon octicon-plus"></span>
+														<span class="select-menu-item-text">添加导航</span>
+													</a>
+												</div>
+												<div class="select-menu-list">
+													<a href="#" onclick="showLinkMode();" class="select-menu-item"> <span
+														class="select-menu-item-icon octicon octicon-plus"></span>
+														<span class="select-menu-item-text">添加链接</span>
+													</a>
+												</div>
+											</div>
+											<div class="select-menu-loading-overlay"></div>
+										</div>
+									</div></li>
+								<li class="pull-right"><a class="zwa" onclick="clickedit()">
+										<span id="toggleedit" class="octicon octicon-pencil"></span>
+										<span id="edit-title">编辑</span>
+								</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="panel-body">
+
 						<ul id="myTab" class="nav nav-tabs">
 							<li class="active"><a href="#home" data-toggle="tab">技术社区</a></li>
 							<li><a href="#sjyx" data-toggle="tab">社交邮箱</a></li>
@@ -180,7 +224,9 @@ a.list-group-item:hover {
 			</div>
 
 			<div class="col-lg-9">
-				<form id="querylink" action="http://www.baidu.com/baidu" target="_blank" class="input-group input-group-sm">
+				<form id="querylink" action="http://www.baidu.com/baidu"
+					target="_blank" class="input-group input-group-sm">
+
 					<input name="tn" type="hidden" value="baidu"> <input
 						id="linktxt" name="word" baiduSug="1" type="text"
 						class="form-control" placeholder="请输入查询内容"> <span

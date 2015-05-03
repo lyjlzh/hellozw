@@ -3,14 +3,6 @@ $(function() {
 	getNavList("navList1", 1);
 	btn_click("402881fc4bcf3608014bcf502c970000");
 
-	$("#mytitle")
-			.popover(
-					{
-						title : '选择要添加的内容<button type="button" class="close" aria-label="Close" onclick="closepopover()"><span aria-hidden="true" style="line-height:.8">&times;</span></button>',
-						content : '<ul class="list-group"><li class="list-group-item"><span class="octicon octicon-plus" style="margin-right:5px;color:#666"></span><a href="#" data-toggle="modal" onclick="showNavMode();">新建导航列表</a></li><li class="list-group-item"><span class="octicon octicon-plus" style="margin-right:5px;color:#666"></span><a href="#" data-toggle="modal" onclick="showLinkMode();">新建链接内容</a></li></ul>',
-						html : true
-					});
-
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
 		// 获取已激活的标签页的名称
 		var activeTab = $(e.target).text();
@@ -347,13 +339,11 @@ var addLink = function() {
 
 var showNavMode = function() {
 	$('#navModal').modal('show');
-	closepopover();
 };
 
 var showLinkMode = function() {
 	$('#linkModal').modal('show')
 	addLinkTypeDOM();
-	closepopover();
 };
 
 // 关闭弹出框
@@ -373,22 +363,25 @@ var closepopover3 = function(name) {
 
 // 点击编辑按钮
 var clickedit = function() {
-	if ($("#toggleedit").hasClass("octicon-gear")) {
-		$("#toggleedit").removeClass("octicon-gear").addClass(
+	if ($("#toggleedit").hasClass("octicon-pencil")) {
+		$("#toggleedit").removeClass("octicon-pencil").addClass(
 				"octicon-mail-reply");
+		$("#edit-title").text("返回");
+		$("#edit-title").parent().addClass('selected');
 		dragNavAndLink();
 	} else {
 		$("#toggleedit").removeClass("octicon-mail-reply").addClass(
-				"octicon-gear");
+				"octicon-pencil");
+		$("#edit-title").text("编辑");
+		$("#edit-title").parent().removeClass('selected');
 		destoryDragNav();
-
 	}
 	$(".show-nav-list").toggle();
 };
 
 // 代码切换点击编辑按钮
 var toggleEditClass = function() {
-	if ($("#toggleedit").hasClass("octicon-gear")) {
+	if ($("#toggleedit").hasClass("octicon-pencil")) {
 		$(".show-nav-list").hide();
 
 	} else {

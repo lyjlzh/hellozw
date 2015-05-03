@@ -5,6 +5,26 @@
 <html>
 <head>
 <title>新感觉,新体验</title>
+<style>
+body {
+	background-color: rgb(255, 255, 255);
+	background-image:
+		url("https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin/400.jpg?2");
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -10;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	zoom: 1;
+}
+</style>
 </head>
 <body>
 	<div class="container">

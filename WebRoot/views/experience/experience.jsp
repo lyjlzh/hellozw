@@ -30,14 +30,25 @@
 				<p>这些项目都是我从众多项目中筛选出来的优质项目，开发周期也都是超过半年以上</p>
 				<!-- Single button -->
 				<div class="btn-group">
-					<button type="button" class="btn btn-default dropdown-toggle"
-						data-toggle="dropdown" aria-expanded="false"><span class="octicon octicon-tools"></span>
-						项目列表管理 <span class="caret"></span>
+					<button type="button"
+						class="btn btn-sm btn-default dropdown-toggle"
+						data-toggle="dropdown" aria-expanded="false">
+						<span class="octicon octicon-gear"></span> 项目列表管理 <span
+							class="caret"></span>
 					</button>
-					<ul class="dropdown-menu" role="menu">
+					<!-- <ul class="dropdown-menu">
 						<li><a href="#">添加项目</a></li>
 						<li><a href="#">设置相关操作</a></li>
-					</ul>
+					</ul> -->
+					<div class="dropdown-menu" style="width:300px;">
+						<div lass="list-group">
+							<a href="#" class="list-group-item"> <span class="octicon octicon-gear"></span>Cras justo odio </a> <a
+								href="#" class="list-group-item"><span class="octicon octicon-gear"></span>Dapibus ac facilisis in</a> <a
+								href="#" class="list-group-item"><span class="octicon octicon-gear"></span>Morbi leo risus</a> <a href="#"
+								class="list-group-item"><span class="octicon octicon-gear"></span>Porta ac consectetur ac</a> <a href="#"
+								class="list-group-item"><span class="octicon octicon-gear"></span>Vestibulum at eros</a>
+						</div>
+					</div>
 				</div>
 
 			</div>
@@ -57,10 +68,10 @@
 							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
 							dolor id nibh ultricies vehicula ut id elit.</p>
 						<p>
-							<a href="#" class="btn btn-primary" role="button">了解更多</a> <a
-								href="#" class="btn btn-default" role="button">分享</a> <a
-								href="#" class="btn btn-default" role="button">编辑</a> <a
-								href="#" class="btn btn-default" role="button">删除</a>
+							<a href="#" class="btn btn-xs btn-primary" role="button">了解更多</a>
+							<a href="#" class="btn btn-xs btn-default" role="button">分享</a> <a
+								href="#" class="btn btn-xs btn-default" role="button">编辑</a> <a
+								href="#" class="btn btn-xs btn-default" role="button">删除</a>
 						</p>
 
 
